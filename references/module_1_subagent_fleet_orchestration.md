@@ -66,12 +66,12 @@ The orchestrator dispatches 5 specialized subagents concurrently via `invoke_sub
   ```
 
 ### Agent 2: `market-conversion` (Conversion Rate Optimization Analyst)
-* **Objective**: Detect friction in the user journey, checkout abandonment risks, and cross-page pricing conflicts.
+* **Objective**: Detect friction in the user journey, checkout abandonment risks, and cross-page pricing conflicts per [`kirby-text-first-cro`](../../kirby-text-first-cro/SKILL.md) (§1.5, §1.6, §16, §17) and [`kirby-local-seo`](../../kirby-local-seo/SKILL.md) (Module 8).
 * **Checks**:
-  - **Cross-Page Pricing Audit**: Does the pricing on dedicated service pages match the promotions/specials page 1:1? (e.g., catching $1,400 vs $1,500 discrepancies).
-  - **Form Friction**: Are lead capture forms bloated with unnecessary fields (e.g. comment textareas on quote forms)?
-  - **Visual Friction**: Are hero carousels or rotating sliders disorienting visitors?
-  - **CTA Clarity**: Are primary CTAs benefit-driven (*"Book Free Consultation"*) or passive (*"Submit"* / *"Click Here"*)?
+  - **Cross-Page Pricing Parity**: Execute [`kirby-text-first-cro`](../../kirby-text-first-cro/SKILL.md) §16 (verify service pages match `/specials` and checkout 1:1).
+  - **Form & Pricing Transparency**: Audit against [`kirby-text-first-cro`](../../kirby-text-first-cro/SKILL.md) §17 (transparent pricing tables vs. gated multi-field forms).
+  - **Visual & Journey Friction**: Enforce [`kirby-text-first-cro`](../../kirby-text-first-cro/SKILL.md) §1.5 (hero carousel ban) and §1.6 (4-step linear process bar).
+  - **CTA Clarity**: Verify benefit-driven primary CTAs (*"Book Free Consultation"*) vs. passive labels (*"Submit"*).
 
 ### Agent 3: `market-competitive` (Competitive Intelligence Analyst)
 * **Objective**: Deconstruct the competitive landscape across 3 explicit tiers:
