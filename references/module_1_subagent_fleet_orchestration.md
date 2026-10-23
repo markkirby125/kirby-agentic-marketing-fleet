@@ -26,24 +26,24 @@ Before dispatching the subagent fleet, the parent orchestrator executes discover
 
 ---
 
-## 1.2 The 5 Subagent Task Contracts
+## 1.2 The 6 Subagent Task Contracts
 
-The orchestrator dispatches 5 specialized subagents concurrently via `invoke_subagent`. Each subagent receives an isolated prompt contract:
+The orchestrator dispatches 6 specialized subagents concurrently via `invoke_subagent`. Each subagent receives an isolated prompt contract:
 
 ```
 ┌────────────────────────────────────────────────────────────────────────┐
 │                        PARENT ORCHESTRATOR                             │
-│                  Dispatches 5 Subagents in Parallel                    │
+│                  Dispatches 6 Subagents in Parallel                    │
 └────────────────────────────────────────────────────────────────────────┘
-          │                 │                │                │
-          ▼                 ▼                ▼                ▼
-   [market-content]  [market-convers.] [market-compet.] [market-technic.]
-   - Value Prop      - Pricing Parity  - Direct Tier    - Schema JSON-LD
-   - Clarity         - Friction Points - Indirect Tier  - Meta Tags
-   - Anti-Slop Copy  - CTA Visibility  - Aspirational   - Crawl/Speed
-          │                 │                │                │
-          └─────────────────┴────────┬───────┴────────────────┘
-                                     ▼
+      │              │              │              │              │
+      ▼              ▼              ▼              ▼              ▼
+[market-cont.] [market-conv.] [market-comp.] [market-tech.] [market-seas.]
+- Value Prop   - Price Parity - Direct Tier  - Schema LD    - Promo Parity
+- Clarity      - Friction     - Indirect     - Meta Tags    - Discount Blk
+- Anti-Slop    - CTA Visib.   - Aspirational - Crawl/Speed  - AI Bot Access
+      │              │              │              │              │
+      └──────────────┴──────────────┼──────────────┴──────────────┘
+                                    ▼
                             [market-strategy]
                             - Quick Wins (W1)
                             - Medium-Term (M1-3)
@@ -93,3 +93,13 @@ The orchestrator dispatches 5 specialized subagents concurrently via `invoke_sub
   - *Week 1 (Quick Wins)*: Low-effort, high-impact fixes (resolve pricing conflicts, inject meta descriptions, embed live Google reviews).
   - *Months 1–3 (Medium-Term)*: Dedicated service entity pages, pricing transparency tables, Astro static rebuild.
   - *Months 3–6 (Strategic)*: Competitor link gap outreach, PR syndication, automated review drip pipelines.
+
+### Agent 6: `market-seasonal` (Seasonal & Promotion Readiness Auditor)
+*Source: Edward Sturm Ep. 1206 (David Quaid, Harpreet Singh, Gagan Ghotra).*
+* **Objective**: Audit promotional landing pages, seasonal campaign readiness, price parity, and AI shopping engine accessibility during peak promotional cycles.
+* **Checks**:
+  - **Discount Transparency Block**: Verify that promotional landing pages feature an unambiguous, high-contrast Discount Transparency Block with dual strikethrough pricing, explicit net dollar and percentage savings, and auto-apply deep-link query parameters (`?promo=BF2026`) matching [`kirby-text-first-cro`](../../kirby-text-first-cro/SKILL.md) §1.7.
+  - **Checkout Promo Box Clutter**: Verify that coupon input fields on checkout carts are collapsed by default behind an understated text link to prevent coupon excursion bounces ([`kirby-text-first-cro`](../../kirby-text-first-cro/SKILL.md) §16.1).
+  - **Multi-Surface Pricing Parity**: Verify that advertised discount rates match Google Merchant Center feeds, GBP Product cards ([`kirby-local-seo`](../../kirby-local-seo/SKILL.md) Module 6 §6.14), and final checkout cart totals with 1:1 numerical precision.
+  - **AI Shopping Bot Access**: Audit `robots.txt` to verify that AI search and commercial shopping bots (`Google-Extended`, `PerplexityBot`, `GPTBot`) are permitted to crawl promotional catalogs ([`kirby-aiseo-skill`](../../kirby-aiseo-skill/SKILL.md) §1.22).
+  - **Late-Mover Crawl Acceleration**: Verify that temporary promotional links are injected into the global navigation header and homepage Viewport 1 above the fold ([`kirby-seo-timing-benchmarks`](../../kirby-seo-timing-benchmarks/SKILL.md) Reference 05 §5.5), and that URLs reside in evergreen directories without calendar years in live slugs ([`kirby-seo-deployment`](../../kirby-seo-deployment/SKILL.md) Module 7 §7.18).

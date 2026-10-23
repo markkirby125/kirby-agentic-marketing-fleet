@@ -13,11 +13,20 @@ The overall audit score is calculated across the 5 core diagnostic dimensions, w
 $$\text{Overall Score} = (C \times 0.25) + (V \times 0.25) + (T \times 0.20) + (K \times 0.15) + (S \times 0.15)$$
 
 Where:
-* $C$ = **Conversion & Funnel Optimization** (25% weight)
-* $V$ = **Content, Messaging & Value Proposition** (25% weight)
-* $T$ = **Technical SEO & Schema Infrastructure** (20% weight)
-* $K$ = **Competitive Differentiation & Positioning** (15% weight)
-* $S$ = **Growth Strategy & Retention Loops** (15% weight)
+* $C$ = **Conversion & Funnel Optimization** (25% weight) — evaluated by Agent 2 (`market-conversion`) and cross-audited by Agent 6 (`market-seasonal`) for promotional conversion friction (`MISSING_DISCOUNT_TRANSPARENCY_BLOCK`, `UNCOLLAPSED_CHECKOUT_PROMO_BOX`, and `PROMO_PRICE_PARITY_MISMATCH`).
+* $V$ = **Content, Messaging & Value Proposition** (25% weight) — evaluated by Agent 1 (`market-content`).
+* $T$ = **Technical SEO & Schema Infrastructure** (20% weight) — evaluated by Agent 4 (`market-technical`) and cross-audited by Agent 6 (`market-seasonal`) for promotional crawl/indexability defects (`AI_SHOPPING_BOT_ROBOTS_BLOCK`, `YEAR_IN_SLUG_PROMO_CANNIBALIZATION`, `MISSING_LATE_MOVER_ACCELERATION`).
+* $K$ = **Competitive Differentiation & Positioning** (15% weight) — evaluated by Agent 3 (`market-competitive`) and local merchant catalog parity ([kirby-local-seo](../../kirby-local-seo/SKILL.md)).
+* $S$ = **Growth Strategy & Retention Loops** (15% weight) — evaluated by Agent 5 (`market-strategy`) and post-holiday retargeting loops ([kirby-paid-acquisition](../../kirby-paid-acquisition/SKILL.md)).
+
+> [!NOTE]
+> **Subagent Synthesis Invariant & Point Decrement Protocol**:
+> 1. **Cross-Cutting Telemetry**: Agent 6 (`market-seasonal`) functions as a cross-cutting promotional specialist. Rather than inflating the dimensional denominator, Agent 6 defects directly decrement the corresponding primary dimensional score (baseline 100 points per dimension) using deterministic point penalties:
+>    - **CRITICAL Defect**: −15 points
+>    - **HIGH Defect**: −8 points
+>    - **MEDIUM Defect**: −4 points
+>    - **LOW Defect**: −1 point
+> 2. **Deduplication Invariant**: Agent 2 (`market-conversion`) owns evergreen page-to-page pricing parity; Agent 6 (`market-seasonal`) owns multi-surface promotional parity (GMC feeds, GBP products, deep-link params). When both subagents detect pricing discrepancies, findings deduplicate on `PROMO_PRICE_PARITY_MISMATCH` before scoring to prevent double deductions against $C$.
 
 ### Grading Scale:
 * **90–100 (Grade A)**: Category Leader. Highly optimized, frictionless conversion flow, robust schema.
@@ -61,3 +70,20 @@ Findings returned by subagents must be sorted and highlighted using strict sever
   - Outdated seasonal CTAs (e.g. promoting "July Specials" in October).
   - Unbranded business email (e.g. using `@yahoo.com` or `@gmail.com` instead of `@company.com`).
   - Missing OpenGraph social preview images.
+
+---
+
+## 2.3 Seasonal & Promotional Defect Taxonomy (Ep. 1206 Audit Rules)
+
+*Source: Edward Sturm Ep. 1206 (David Quaid, Harpreet Singh, Gagan Ghotra).*
+
+When auditing e-commerce, local businesses, or SaaS brands running promotional campaigns or preparing for Q4 events, subagents must classify seasonal defects using dedicated diagnostic codes:
+
+| Defect Code | Severity | Root Cause & Failure Mechanism | Corrective Protocol |
+|---|---|---|---|
+| `MISSING_DISCOUNT_TRANSPARENCY_BLOCK` | **CRITICAL** | Promotional page uses vague copy (*"Up to 50% Off Select Items"*) lacking explicit strikethrough MSRP and net savings. Drives up to 68% coupon-hunting bounces. | Deploy text-dominant Discount Transparency Block per `../../kirby-text-first-cro/SKILL.md` §1.7. |
+| `UNCOLLAPSED_CHECKOUT_PROMO_BOX` | **CRITICAL** | Exposed, un-collapsed coupon code field on final checkout screen triggers 18–25% cart abandonment excursion to coupon aggregators. | Collapse coupon field behind understated text link per `../../kirby-text-first-cro/SKILL.md` §16.1. |
+| `PROMO_PRICE_PARITY_MISMATCH` | **CRITICAL** | Promotional rates conflict between landing pages, Google Merchant Center feeds, GBP product cards, and checkout cart totals. | Enforce 1:1 numerical price parity per `../../kirby-text-first-cro/SKILL.md` §16 and `../../kirby-local-seo/SKILL.md` Module 6 §6.14. |
+| `AI_SHOPPING_BOT_ROBOTS_BLOCK` | **HIGH** | `robots.txt` blocks commercial AI crawlers (`Google-Extended`, `PerplexityBot`, `GPTBot`) from indexing promotional catalog directories. | Update robots.txt bot governance permissions per `../../kirby-aiseo-skill/SKILL.md` §1.22. |
+| `YEAR_IN_SLUG_PROMO_CANNIBALIZATION` | **HIGH** | New seasonal landing pages deploy year-modified slugs (e.g., `/deals/black-friday-2026/` instead of evergreen `/deals/black-friday/`), cannibalizing evergreen hub authority. | Re-architect into year-less evergreen directories with January archival snapshots per `../../kirby-seo-deployment/SKILL.md` Module 7 §7.18. |
+| `MISSING_LATE_MOVER_ACCELERATION` | **MEDIUM** | Time-sensitive promotional pages launched without global header navigation links or homepage Viewport 1 anchors, suffering 20h+ crawl delays. | Deploy 4-step Late-Mover Crawl Acceleration protocol per `../../kirby-seo-timing-benchmarks/SKILL.md` Reference 05 §5.5. |

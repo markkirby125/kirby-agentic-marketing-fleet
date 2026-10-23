@@ -40,7 +40,7 @@ On your [Service Name] page, the package is listed at $1,400 (Save $400), but on
 
 When prospective clients see two different prices, they hesitate and bounce instead of booking.
 
-I ran a full 5-agent marketing and technical audit on your site and compiled the complete diagnostic report (attached as a PDF). It also uncovered that 100% of your pages are missing custom meta descriptions, causing Google to auto-generate search snippets.
+I ran a full 6-agent marketing and technical audit on your site and compiled the complete diagnostic report (attached as a PDF). It also uncovered that 100% of your pages are missing custom meta descriptions, causing Google to auto-generate search snippets.
 
 I recorded a quick 90-second video walking through how to fix these two issues immediately: [Loom Video Link]
 

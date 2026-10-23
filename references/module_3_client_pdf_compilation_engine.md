@@ -31,7 +31,7 @@ Cover Page & Scorecard   Key Findings & Roadmaps
 
 ## 3.2 Input Telemetry JSON Contract (`audit.json`)
 
-Aggregate the 5 subagent outputs from [Module 1](module_1_subagent_fleet_orchestration.md) and the weighted score from [Module 2](module_2_audit_scorecard_and_defect_taxonomy.md) into a single JSON file conforming to this schema:
+Aggregate the 6 subagent outputs from [Module 1](module_1_subagent_fleet_orchestration.md) (including Agent 6 seasonal and promotional findings) and the weighted score from [Module 2](module_2_audit_scorecard_and_defect_taxonomy.md) into a single JSON file conforming to this schema:
 
 ```json
 {
