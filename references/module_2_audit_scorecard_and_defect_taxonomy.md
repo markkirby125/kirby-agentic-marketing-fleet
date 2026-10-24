@@ -87,3 +87,27 @@ When auditing e-commerce, local businesses, or SaaS brands running promotional c
 | `AI_SHOPPING_BOT_ROBOTS_BLOCK` | **HIGH** | `robots.txt` blocks commercial AI crawlers (`Google-Extended`, `PerplexityBot`, `GPTBot`) from indexing promotional catalog directories. | Update robots.txt bot governance permissions per `../../kirby-aiseo-skill/SKILL.md` §1.22. |
 | `YEAR_IN_SLUG_PROMO_CANNIBALIZATION` | **HIGH** | New seasonal landing pages deploy year-modified slugs (e.g., `/deals/black-friday-2026/` instead of evergreen `/deals/black-friday/`), cannibalizing evergreen hub authority. | Re-architect into year-less evergreen directories with January archival snapshots per `../../kirby-seo-deployment/SKILL.md` Module 7 §7.18. |
 | `MISSING_LATE_MOVER_ACCELERATION` | **MEDIUM** | Time-sensitive promotional pages launched without global header navigation links or homepage Viewport 1 anchors, suffering 20h+ crawl delays. | Deploy 4-step Late-Mover Crawl Acceleration protocol per `../../kirby-seo-timing-benchmarks/SKILL.md` Reference 05 §5.5. |
+
+---
+
+## 2.4 Evidence-Tiered Audit Rubric & Anti-Shotgun Changelog Standard
+
+*Source: The SEO Meta Study (Krešimir Ćorluka; Zenodo DOI: 10.5281/zenodo.22768160) discussed in The Edward Show Ep. 1191 (audio release, Oct 8, 2026) / Ep. 1207 (video interview, Oct 24, 2026).* See [`kirby-seo-telemetry`](../../kirby-seo-telemetry/SKILL.md) Module 15 §15.1 as the canonical reference.
+
+Traditional marketing agencies deliver 40-page audit decks packed with speculative recommendations, implementing 15 changes simultaneously ("shotgun SEO") and attributing seasonal tailwinds to their retainers. In reality, the 2026 SEO Meta Study screened 9,249 technical SEO documents and confirmed that uncontrolled before/after studies claim an inflated median lift of **+106%**, whereas rigorous controlled A/B split tests measure a median lift of only **+16% among successful controlled interventions** (the median across *all* controlled tests lands in the low single digits, with over 50% of real-world split tests yielding neutral or negative results). 602 of 769 candidate tactics analyzed possessed zero controlled test validation.
+
+To establish executive credibility, subagent audit decks must classify all tactical recommendations into explicit **Evidentiary Tiers**:
+
+### 1. The 3-Tier Evidentiary Classification
+* **Tier 1: Controlled Split-Test Validated (High Confidence)**:
+  - Tactics backed by verified controlled A/B testing (e.g., replacing date tokens with `Updated Daily` [+11% organic sessions lift], or inlinking orphan category pages).
+* **Tier 2: Controlled Negative Avoidance (Harm Prevention)**:
+  - Tactics empirically proven in controlled split tests to damage search or conversion metrics: displaying static prices in title tags (-15% e-commerce drop / -7% rental drop), or submitting prophylactic disavow files without an active manual action (0% lift / neutral waste).
+* **Tier 3: Operational Hypotheses (Requires Isolated Testing)**:
+  - Tactics derived from observational or uncontrolled case studies (accounting for 78.3% of industry tactics, including spec-dense structured PDP descriptions [+85% as-reported directional traffic lift]). Must be explicitly disclosed to clients as operational conventions requiring single-variable split-testing before full rollout.
+
+### 2. The Client SEO Changelog Deliverable (`seo_changelog.json`)
+Every agency retainer engagement (Module 4) must establish an immutable client change ledger:
+* **Protocol**: Enforce single-variable isolation and paired control groups using the production schema defined in [`kirby-seo-telemetry`](../../kirby-seo-telemetry/SKILL.md) Module 15.
+* **The 90-Day Evaluation Gate**: Mandate a 90-day evaluation cooldown before declaring an SEO change successful, protecting the client from seasonal false-positives and protecting the agency from premature client churn.
+

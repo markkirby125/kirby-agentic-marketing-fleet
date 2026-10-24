@@ -2,7 +2,7 @@
 name: kirby-agentic-marketing-fleet
 description: "Deploy an autonomous multi-agent AI marketing agency fleet in Claude Code / Gemini CLI. Executes parallel subagents for website audits, CRO, competitive intel, SEO, and compiles client-ready PDF reports."
 category: workflow
-triggers: [market-audit, marketing-audit, agentic-marketing, subagent-audit, marketing-fleet, audit-report-pdf, agency-retainer]
+triggers: [market-audit, marketing-audit, agentic-marketing, subagent-audit, marketing-fleet, audit-report-pdf, agency-retainer, evidence-based-audit, seo-changelog-deliverable]
 ---
 
 # SOP: Agentic Marketing Fleet

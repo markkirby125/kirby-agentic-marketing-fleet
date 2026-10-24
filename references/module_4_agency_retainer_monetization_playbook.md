@@ -67,3 +67,8 @@ When prospects book a discovery call, present a structured 3-phase retainer rath
 ## 4.3 Client Retention Rules
 1. **Never Report Input Metrics**: Never send clients reports detailing "hours worked" or "tasks completed". Report commercial outcomes: conversion rate increases, Map Pack rank radius expansion, and qualified lead volume.
 2. **Automate the Monthly Re-Audit**: On the 1st of every month, re-run `/market-audit`, compile the delta PDF showing score improvements (e.g., moving from 64/100 to 88/100), and email it as proof of ongoing value.
+
+---
+
+## 4.4 The Immutable Client Change Ledger (`seo_changelog.json`)
+Every ongoing retainer engagement must maintain a single-variable isolated change ledger following the production schema in `../../kirby-seo-telemetry/SKILL.md` Module 15. Enforce a 90-day evaluation cooldown before scoring intervention success. Never implement simultaneous multi-variable batches ("shotgun SEO"), protecting the client from confounding noise and protecting the retainer from premature churn.

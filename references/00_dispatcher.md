@@ -13,7 +13,7 @@ When executing tasks under this skill, **do not guess**. Review the module index
 - **Module 1: Subagent Fleet Orchestration & Prompt Contracts** — The 6-agent parallel dispatch architecture (`market-content`, `market-conversion`, `market-competitive`, `market-technical`, `market-strategy`, `market-seasonal`), discovery URL ingestion, business model classification, and isolated task contracts.  
   👉 Read `./module_1_subagent_fleet_orchestration.md`
 
-- **Module 2: Audit Scorecard & Defect Severity Taxonomy** — The 0–100 weighted evaluation framework, composite grading, and 4-tier defect classification (`Critical`, `High`, `Medium`, `Low`) with real-world failure patterns and §2.3 Seasonal & Promotional Defect Taxonomy (Ep. 1206 audit rules).  
+- **Module 2: Audit Scorecard & Defect Severity Taxonomy** — The 0–100 weighted evaluation framework, composite grading, 4-tier defect classification (`Critical`, `High`, `Medium`, `Low`) with real-world failure patterns, §2.3 Seasonal & Promotional Defect Taxonomy (Ep. 1206 audit rules), and §2.4 Evidence-Tiered Audit Rubric & Anti-Shotgun Changelog Standard (The SEO Meta Study / Ep. 1191/1207).  
   👉 Read `./module_2_audit_scorecard_and_defect_taxonomy.md`
 
 - **Module 3: Client PDF Compilation Engine** — Python ReportLab / WeasyPrint script architecture that compiles multi-agent markdown telemetry into a styled, publication-grade executive PDF deck.  
@@ -61,10 +61,11 @@ When executing tasks under this skill, **do not guess**. Review the module index
    - Ingest outputs from all 6 subagents.
    - Calculate composite 0–100 health score.
    - Categorize all identified defects into `Critical`, `High`, `Medium`, and `Low` severity tiers.
+   - Classify all tactical remediation proposals into Evidentiary Tiers (Tier 1: Controlled Split-Test Validated, Tier 2: Controlled Negative Avoidance [Harm Prevention], Tier 3: Operational Hypotheses) per §2.4.
 
 4. **Phase 4: Deliverable Generation & Agency Retainer Pitch**  
    - Execute Python compiler (`bin/generate_audit_pdf.py` or `./module_3_client_pdf_compilation_engine.md`).
-   - Deliver executive PDF report to client alongside the 3-stage monetization roadmap.
+   - Deliver executive PDF report to client alongside the 3-stage monetization roadmap and single-variable `seo_changelog.json` ledger (with 90-day evaluation cooldown) to prevent agency-client shotgun churn.
 
 ---
 
@@ -76,3 +77,4 @@ When executing tasks under this skill, **do not guess**. Review the module index
 - **High-Converting Sales Copywriting**: For rewriting landing page copy using the 17-step Direct Response framework, route to `../../kirby-direct-response-copywriting/SKILL.md`.
 - **Link Outreach & Parasite Distribution**: For executing competitor backlink gap closure, route to `../../kirby-off-page-seo/SKILL.md` and `../../kirby-saas-syndicate/SKILL.md`.
 - **Seasonal Directory & Timing Architecture**: For evergreen promotional directories, January archival handoffs, and late-mover crawl acceleration, route to `../../kirby-seo-deployment/SKILL.md` (Module 7 §7.18) and `../../kirby-seo-timing-benchmarks/SKILL.md` (Reference 05 §5.5).
+- **Controlled Experiments & Changelog Governance**: For establishing single-variable A/B split-test isolated changelogs (`seo_changelog.json`) with 90-day evaluation cooldowns and bot log telemetry, route to `../../kirby-seo-telemetry/SKILL.md` (Module 15).
