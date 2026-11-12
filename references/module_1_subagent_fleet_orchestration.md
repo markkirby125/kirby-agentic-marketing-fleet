@@ -79,6 +79,8 @@ The orchestrator dispatches 6 specialized subagents concurrently via `invoke_sub
   - **Tier 2 (Indirect Competitors)**: Alternative solutions satisfying the same core customer desire (e.g. at-home skincare kits vs. med spa clinic).
   - **Tier 3 (Aspirational Competitors)**: National or category-defining leaders setting the user experience benchmark.
 * **Matrix Output**: Comparison of pricing visibility, review volume, tech stack, and unique selling propositions (USPs).
+* **Core-Update Outlier Forensics (during an active rollout only):** Do not recommend structural changes to the client site mid-rollout. Run the Ahrefs outlier workflow and its tracker-desync/single-variable caveats in [`kirby-seo-telemetry`](../../kirby-seo-telemetry/SKILL.md) Module 16 §16.3–16.4 and report as Tier 3 hypotheses.
+* **Footprint Check (Logo-Swap Litmus):** Flag a client or competitor site that is a theme-kit clone of other sites (`../../kirby-seo-deployment/SKILL.md` Module 7 §7.3).
 
 ### Agent 4: `market-technical` (Technical SEO & Schema Analyst)
 * **Objective**: Inspect HTML markup, meta tags, structured data, and search engine discoverability.
@@ -92,6 +94,7 @@ The orchestrator dispatches 6 specialized subagents concurrently via `invoke_sub
 * **Structure**:
   - *Week 1 (Quick Wins)*: Low-effort, high-impact fixes (resolve pricing conflicts, inject meta descriptions, embed live Google reviews).
   - *Months 1–3 (Medium-Term)*: Dedicated service entity pages, pricing transparency tables, Astro static rebuild.
+  - *Mid-rollout (Nov 10–~Dec 1, 2026):* roadmap items stay queued per [`kirby-seo-telemetry`](../../kirby-seo-telemetry/SKILL.md) Module 16 §16.2; run the pre-publication semantic drift gate in [`kirby-aiseo-skill`](../../kirby-aiseo-skill/SKILL.md) Module 20 (via [`kirby-grounded-seo-auditor`](../../kirby-grounded-seo-auditor/SKILL.md) Module 04 §2) before any content batch.
   - *Months 3–6 (Strategic)*: Competitor link gap outreach, PR syndication, automated review drip pipelines.
 
 ### Agent 6: `market-seasonal` (Seasonal & Promotion Readiness Auditor)

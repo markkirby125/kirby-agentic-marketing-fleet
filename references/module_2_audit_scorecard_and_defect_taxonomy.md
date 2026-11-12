@@ -56,6 +56,7 @@ Findings returned by subagents must be sorted and highlighted using strict sever
   - **Gated Pricing Barrier**: Hiding all service pricing behind an intrusive 5-field contact form with mandatory comment boxes.
   - **Rotating Hero Carousel**: Multi-slide image slider in the hero viewport, increasing page cognitive load and bounce rates.
   - **Closed Hours Suppression**: Business listed as "Closed" in the evening, causing Google to dynamically filter it out of local map results.
+  - **Zero-Impression Programmatic Pages:** A large share of a location/template folder has 0 GSC impressions over 28–90 days (measure per [`kirby-seo-telemetry`](../../kirby-seo-telemetry/SKILL.md) Module 8 and Module 16 §16.2; verify 90-day eligibility and prune/301 via [`kirby-local-seo`](../../kirby-local-seo/SKILL.md) Module 7 §7.10).
 
 ### Tier 3: MEDIUM Severity (Missed Growth Opportunities)
 *Depresses conversion velocity or limits geographic reach.*
