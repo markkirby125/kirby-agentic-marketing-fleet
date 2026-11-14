@@ -57,6 +57,8 @@ Findings returned by subagents must be sorted and highlighted using strict sever
   - **Rotating Hero Carousel**: Multi-slide image slider in the hero viewport, increasing page cognitive load and bounce rates.
   - **Closed Hours Suppression**: Business listed as "Closed" in the evening, causing Google to dynamically filter it out of local map results.
   - **Zero-Impression Programmatic Pages:** A large share of a location/template folder has 0 GSC impressions over 28–90 days (measure per [`kirby-seo-telemetry`](../../kirby-seo-telemetry/SKILL.md) Module 8 and Module 16 §16.2; verify 90-day eligibility and prune/301 via [`kirby-local-seo`](../../kirby-local-seo/SKILL.md) Module 7 §7.10).
+  - **Weak Branded Search vs. Backlink Ratio**: High referring-domain count paired with near-zero 90-day GSC branded search volume (directional, single-source — Tier 3 hypothesis; Navneet Panda reference-query check; [`kirby-aiseo-skill`](../../kirby-aiseo-skill/SKILL.md) Module 1 §1.11.1 — diagnosed separately from bare-brand homonym/SERP-slot losses).
+  - **Prohibited Third-Party `AggregateRating` / `Review` JSON-LD**: Injecting `AggregateRating` or `Review` schema on `/trust`, `/facts`, or pages summarizing aggregated third-party platform reviews instead of plain-text HTML with outbound links (`../../kirby-technical-aeo/SKILL.md` Phase 4).
 
 ### Tier 3: MEDIUM Severity (Missed Growth Opportunities)
 *Depresses conversion velocity or limits geographic reach.*
@@ -64,6 +66,9 @@ Findings returned by subagents must be sorted and highlighted using strict sever
   - **Static Copy-Pasted Reviews**: Using plain text quotes instead of an embedded, verifiable Google Business Profile review widget.
   - **Generic Corporate Copy**: Leading with supplier brands or corporate slogans (*"We pride ourselves on customer satisfaction"*) rather than unique local selling propositions.
   - **Navbar Link Bloat**: 50+ navigation links dividing and diluting internal PageRank equity.
+  - **Bare `[Brand Name]` Page-1 SERP Slot Leakage / Homonym Collision**: Unclaimed, stale, or homonym-colliding listings occupying Page-1 organic slots for the exact bare `[Brand Name]` query (distinct from GSC branded demand).
+  - **Missing Above-the-Fold Viewport-Match Actuators**: Primary booking/quote CTA, interactive calculator, clickable `tel:`, price floor, or verified review proof pushed below the initial viewport (`../../kirby-text-first-cro/SKILL.md` §1.9).
+  - **Missing `/trust` or `/facts` AI Discovery Surface**: Absence of a plain-text `/trust` Self-Corroboration Hub or SSOT `/facts` (`"My Business Facts"`) page accessible to `OAI-SearchBot` and `PerplexityBot` (`../../kirby-aiseo-skill/SKILL.md` Module 2 §2.38, §2.51).
 
 ### Tier 4: LOW Severity (Cosmetic & Polish)
 *Minor polish items that elevate brand perception.*
@@ -85,7 +90,7 @@ When auditing e-commerce, local businesses, or SaaS brands running promotional c
 | `MISSING_DISCOUNT_TRANSPARENCY_BLOCK` | **CRITICAL** | Promotional page uses vague copy (*"Up to 50% Off Select Items"*) lacking explicit strikethrough MSRP and net savings. Drives up to 68% coupon-hunting bounces. | Deploy text-dominant Discount Transparency Block per `../../kirby-text-first-cro/SKILL.md` §1.7. |
 | `UNCOLLAPSED_CHECKOUT_PROMO_BOX` | **CRITICAL** | Exposed, un-collapsed coupon code field on final checkout screen triggers 18–25% cart abandonment excursion to coupon aggregators. | Collapse coupon field behind understated text link per `../../kirby-text-first-cro/SKILL.md` §16.1. |
 | `PROMO_PRICE_PARITY_MISMATCH` | **CRITICAL** | Promotional rates conflict between landing pages, Google Merchant Center feeds, GBP product cards, and checkout cart totals. | Enforce 1:1 numerical price parity per `../../kirby-text-first-cro/SKILL.md` §16 and `../../kirby-local-seo/SKILL.md` Module 6 §6.14. |
-| `AI_SHOPPING_BOT_ROBOTS_BLOCK` | **HIGH** | `robots.txt` blocks commercial AI crawlers (`Google-Extended`, `PerplexityBot`, `GPTBot`) from indexing promotional catalog directories. | Update robots.txt bot governance permissions per `../../kirby-aiseo-skill/SKILL.md` §1.22. |
+| `AI_SHOPPING_BOT_ROBOTS_BLOCK` | **HIGH** | `robots.txt` blocks commercial AI crawlers (`Google-Extended`, `OAI-SearchBot`, `PerplexityBot`, `GPTBot`) from indexing promotional catalog directories, `/trust`, or `/facts`. | Update robots.txt bot governance permissions per `../../kirby-aiseo-skill/SKILL.md` §1.22. |
 | `YEAR_IN_SLUG_PROMO_CANNIBALIZATION` | **HIGH** | New seasonal landing pages deploy year-modified slugs (e.g., `/deals/black-friday-2026/` instead of evergreen `/deals/black-friday/`), cannibalizing evergreen hub authority. | Re-architect into year-less evergreen directories with January archival snapshots per `../../kirby-seo-deployment/SKILL.md` Module 7 §7.18. |
 | `MISSING_LATE_MOVER_ACCELERATION` | **MEDIUM** | Time-sensitive promotional pages launched without global header navigation links or homepage Viewport 1 anchors, suffering 20h+ crawl delays. | Deploy 4-step Late-Mover Crawl Acceleration protocol per `../../kirby-seo-timing-benchmarks/SKILL.md` Reference 05 §5.5. |
 

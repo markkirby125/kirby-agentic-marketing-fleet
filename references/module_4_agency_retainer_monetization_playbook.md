@@ -59,14 +59,15 @@ When prospects book a discovery call, present a structured 3-phase retainer rath
 | Retainer Tier | Monthly Investment | Operational Scope | Deliverables |
 | :--- | :--- | :--- | :--- |
 | **Tier 1: Foundational Patch** | **$2,000 – $2,500/mo** | Technical SEO & Funnel Hygiene | Fix all pricing conflicts, write 100% custom meta descriptions, deploy `LocalBusiness` / `MedicalBusiness` JSON-LD schema, embed live Google review widget. |
-| **Tier 2: Growth & Entity Domination** | **$3,500 – $4,500/mo** | Full Entity Mirroring & CRO | Build dedicated landing pages for every GBP category/service (Caleb Ulku Mirror Image Law), install transparent pricing calculators, eliminate navbar bloat, execute review drip engine. |
-| **Tier 3: Market Monopoly** | **$5,000 – $7,500/mo** | Omnichannel AEO & Link Graph | Tier-1 wire press release syndication (Yahoo Finance), high-traffic parasite placement, branded subreddit defense, paid ads bridge landers. |
+| **Tier 2: Growth & Entity Domination** | **$3,500 – $4,500/mo** | Full Entity Mirroring & CRO | Build dedicated landing pages for every GBP category/service (Caleb Ulku Mirror Image Law), install transparent pricing calculators, eliminate navbar bloat, execute trailing 90-day review velocity engine, deploy `/trust` Self-Corroboration Hub & SSOT `/facts` (`"My Business Facts"`) with `OAI-SearchBot`/`PerplexityBot` access and plain-text third-party review consensus (no `AggregateRating` JSON-LD). |
+| **Tier 3: Market Monopoly** | **$5,000 – $7,500/mo** | Omnichannel AEO & Link Graph | Tier-1 wire press release syndication (Yahoo Finance), high-traffic parasite placement, branded subreddit defense, paid ads bridge landers, plus `3–5×` multi-run + multi-turn fan-out probing and **Synthesis Recommendation Share** optimization across Google AI Overviews (`2–4w`) and ChatGPT Search (`60–120d`). |
 
 ---
 
 ## 4.3 Client Retention Rules
 1. **Never Report Input Metrics**: Never send clients reports detailing "hours worked" or "tasks completed". Report commercial outcomes: conversion rate increases, Map Pack rank radius expansion, and qualified lead volume.
 2. **Automate the Monthly Re-Audit**: On the 1st of every month, re-run `/market-audit`, compile the delta PDF showing score improvements (e.g., moving from 64/100 to 88/100), and email it as proof of ongoing value.
+3. **Report Synthesis Recommendation Share Across Engine Lag Windows**: For Tier 2/3 retainers, pair monthly re-audits with `3–5×` multi-run + multi-turn fan-out checks tracking **Synthesis Recommendation Share** and attributed conversions, calibrating client expectations to **Google AI Overviews / Gemini (`2–4 weeks`)** vs. **ChatGPT Search / Thinking (`60–120 days`)** ([`kirby-seo-timing-benchmarks`](../../kirby-seo-timing-benchmarks/SKILL.md) Reference 04 §4.8).
 
 ---
 
