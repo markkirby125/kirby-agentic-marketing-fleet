@@ -64,7 +64,7 @@ When prospects book a discovery call, present a structured 3-phase retainer rath
 
 ---
 
-## 4.3 Client Retention Rules
+## 4.3 Client Retention Rules\n\nResidual Credibility triage (defect-recovery note): check `../../kirby-seo-telemetry/SKILL.md` and `../../kirby-off-page-seo/SKILL.md` §18.23 first; do not duplicate (directional, house guardrail).
 1. **Never Report Input Metrics**: Never send clients reports detailing "hours worked" or "tasks completed". Report commercial outcomes: conversion rate increases, Map Pack rank radius expansion, and qualified lead volume.
 2. **Automate the Monthly Re-Audit**: On the 1st of every month, re-run `/market-audit`, compile the delta PDF showing score improvements (e.g., moving from 64/100 to 88/100), and email it as proof of ongoing value.
 3. **Report Synthesis Recommendation Share Across Engine Lag Windows**: For Tier 2/3 retainers, pair monthly re-audits with `3–5×` multi-run + multi-turn fan-out checks tracking **Synthesis Recommendation Share** and attributed conversions, calibrating client expectations to **Google AI Overviews / Gemini (`2–4 weeks`)** vs. **ChatGPT Search / Thinking (`60–120 days`)** ([`kirby-seo-timing-benchmarks`](../../kirby-seo-timing-benchmarks/SKILL.md) Reference 04 §4.8).
