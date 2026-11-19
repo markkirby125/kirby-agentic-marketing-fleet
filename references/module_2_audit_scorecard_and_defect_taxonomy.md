@@ -52,7 +52,7 @@ Findings returned by subagents must be sorted and highlighted using strict sever
 ### Tier 2: HIGH Severity (Significant Competitive Disadvantage)
 *Suppresses organic visibility or introduces severe friction in the prospect evaluation process.*
 * **Examples**:
-  - **Zero Schema.org Markup**: Complete absence of `LocalBusiness`, `MedicalBusiness`, or `Service` JSON-LD structured data.
+  - **Synthetic Persona Byline**: Bylines, bios or headshots for people who do not exist or did not write the page (AI headshots, invented credentials). Replace with a named, real, verifiable author or the brand (house guardrail, not a measured Google penalty).
   - **Gated Pricing Barrier**: Hiding all service pricing behind an intrusive 5-field contact form with mandatory comment boxes.
   - **Rotating Hero Carousel**: Multi-slide image slider in the hero viewport, increasing page cognitive load and bounce rates.
   - **Closed Hours Suppression**: Business listed as "Closed" in the evening, causing Google to dynamically filter it out of local map results.
@@ -69,6 +69,8 @@ Findings returned by subagents must be sorted and highlighted using strict sever
   - **Bare `[Brand Name]` Page-1 SERP Slot Leakage / Homonym Collision**: Unclaimed, stale, or homonym-colliding listings occupying Page-1 organic slots for the exact bare `[Brand Name]` query (distinct from GSC branded demand).
   - **Missing Above-the-Fold Viewport-Match Actuators**: Primary booking/quote CTA, interactive calculator, clickable `tel:`, price floor, or verified review proof pushed below the initial viewport (`../../kirby-text-first-cro/SKILL.md` §1.9).
   - **Missing `/trust` or `/facts` AI Discovery Surface**: Absence of a plain-text `/trust` Self-Corroboration Hub or SSOT `/facts` (`"My Business Facts"`) page accessible to `OAI-SearchBot` and `PerplexityBot` (`../../kirby-aiseo-skill/SKILL.md` Module 2 §2.38, §2.51).
+  - **Zero Schema.org Markup**: Complete absence of `LocalBusiness`, `MedicalBusiness`, or `Service` JSON-LD. It limits entity disambiguation; report it as identifier hygiene, not a ranking lever (directional, single-source).
+  - **No First-Party Effort Signals**: No original photos, live demos, screenshots or first-party data on money pages (effort proxies are unverified; directional, single-source).
 
 ### Tier 4: LOW Severity (Cosmetic & Polish)
 *Minor polish items that elevate brand perception.*
@@ -76,6 +78,8 @@ Findings returned by subagents must be sorted and highlighted using strict sever
   - Outdated seasonal CTAs (e.g. promoting "July Specials" in October).
   - Unbranded business email (e.g. using `@yahoo.com` or `@gmail.com` instead of `@company.com`).
   - Missing OpenGraph social preview images.
+  - Builder boilerplate and nested wrapper `div`s around the main content (cleanliness, no ranking effect claimed; route to `../../kirby-ai-builder-hygiene/SKILL.md`).
+  - TOFU pages with zero clicks and zero conversions: prune or merge candidates only once sessions are read beside conversions (`../../kirby-seo-telemetry/SKILL.md` Module 5 §5.8).
 
 ---
 
@@ -115,5 +119,5 @@ To establish executive credibility, subagent audit decks must classify all tacti
 ### 2. The Client SEO Changelog Deliverable (`seo_changelog.json`)
 Every agency retainer engagement (Module 4) must establish an immutable client change ledger:
 * **Protocol**: Enforce single-variable isolation and paired control groups using the production schema defined in [`kirby-seo-telemetry`](../../kirby-seo-telemetry/SKILL.md) Module 15.
-* **The 90-Day Evaluation Gate**: Mandate a 90-day evaluation cooldown before declaring an SEO change successful, protecting the client from seasonal false-positives and protecting the agency from premature client churn.
+* **The 90-Day Evaluation Gate**: Mandate a 90-day evaluation cooldown before declaring an SEO change successful, protecting the client from seasonal false-positives and protecting the agency from premature client churn. For a newly launched EMD or single-page tool page, or any page that has just started getting impressions, the gate is also a freeze: no edits to layout, text, titles, meta, schema or internal links except changes already filed in `seo_changelog.json` and defect fixes (broken pages, factual or legal errors, security), per the `FREEZE` entry in [`kirby-seo-telemetry`](../../kirby-seo-telemetry/SKILL.md) Module 15 §15.2 (directional, single-source; not a Google rule).
 
